@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kubistika/code/cpp/yeelight/src/yeelight/bulbs_discover.cpp
+bulbs_discover.h
+/Users/kubistika/code/cpp/yeelight/src/yeelight/bulbs_discover.h
+
+/Users/kubistika/code/cpp/yeelight/src/yeelight/bulbs_discover.h
+arpa/inet.h
+-
+chrono
+-
+iostream
+-
+map
+-
+netinet/in.h
+-
+set
+-
+sstream
+-
+string_view
+-
+sys/socket.h
+-
+vector
+-
+

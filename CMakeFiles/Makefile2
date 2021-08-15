@@ -72,7 +72,7 @@ CMAKE_BINARY_DIR = /Users/kubistika/code/cpp/yeelight
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/example.dir/all
+all: CMakeFiles/cli.dir/all
 all: CMakeFiles/yeelight-lib.dir/all
 
 .PHONY : all
@@ -83,37 +83,37 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/example.dir/clean
+clean: CMakeFiles/cli.dir/clean
 clean: CMakeFiles/yeelight-lib.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/example.dir
+# Target rules for target CMakeFiles/cli.dir
 
 # All Build rule for target.
-CMakeFiles/example.dir/all: CMakeFiles/yeelight-lib.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example.dir/build.make CMakeFiles/example.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example.dir/build.make CMakeFiles/example.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kubistika/code/cpp/yeelight/CMakeFiles --progress-num=1,2 "Built target example"
-.PHONY : CMakeFiles/example.dir/all
+CMakeFiles/cli.dir/all: CMakeFiles/yeelight-lib.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cli.dir/build.make CMakeFiles/cli.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cli.dir/build.make CMakeFiles/cli.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kubistika/code/cpp/yeelight/CMakeFiles --progress-num=1,2 "Built target cli"
+.PHONY : CMakeFiles/cli.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/example.dir/rule: cmake_check_build_system
+CMakeFiles/cli.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kubistika/code/cpp/yeelight/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/example.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/cli.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kubistika/code/cpp/yeelight/CMakeFiles 0
-.PHONY : CMakeFiles/example.dir/rule
+.PHONY : CMakeFiles/cli.dir/rule
 
 # Convenience name for target.
-example: CMakeFiles/example.dir/rule
+cli: CMakeFiles/cli.dir/rule
 
-.PHONY : example
+.PHONY : cli
 
 # clean rule for target.
-CMakeFiles/example.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example.dir/build.make CMakeFiles/example.dir/clean
-.PHONY : CMakeFiles/example.dir/clean
+CMakeFiles/cli.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cli.dir/build.make CMakeFiles/cli.dir/clean
+.PHONY : CMakeFiles/cli.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/yeelight-lib.dir

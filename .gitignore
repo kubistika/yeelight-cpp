@@ -25,13 +25,13 @@
 *.la
 *.a
 *.lib
+CMakeFiles/
 
 # Executables
 *.exe
 *.out
 *.app
 .clang-format
-example
 CMakeCache.txt
 .vscode/
 Makefile

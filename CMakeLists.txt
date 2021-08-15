@@ -8,9 +8,9 @@ ADD_LIBRARY( yeelight-lib STATIC
 
 include_directories(src/yeelight)
 
-set(SOURCE_FILES src/example/main.cpp)
-add_executable(example ${SOURCE_FILES})
+set(SOURCE_FILES src/cli/main.cpp)
+add_executable(cli ${SOURCE_FILES})
 
 
-TARGET_LINK_LIBRARIES( example
+TARGET_LINK_LIBRARIES( cli
                        yeelight-lib )

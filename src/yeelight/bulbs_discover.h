@@ -1,21 +1,14 @@
-#include <arpa/inet.h>
 #include <chrono>
-#include <iostream>
 #include <map>
-#include <netinet/in.h>
-#include <set>
-#include <sstream>
-#include <string_view>
-#include <sys/socket.h>
-#include <vector>
+#include <string>
 
 using BulbInfo = std::map<std::string, std::string>;
+using DiscoverResult = std::map<std::string, BulbInfo>;
 
 class BulbsDiscover {
 private:
-  static std::tuple<std::string, std::string> split(const std::string &s, char delim);
   static BulbInfo parse_ssdp_response(std::string ssdp_response);
 
 public:
-  static std::map<std::string, BulbInfo> discover(std::chrono::duration<int> timeout);
+  static DiscoverResult discover_by_ssdp(std::chrono::duration<int> timeout);
 };

@@ -1,3 +1,11 @@
+#include <arpa/inet.h>
+#include <iostream>
+#include <netinet/in.h>
+#include <set>
+#include <sstream>
+#include <sys/socket.h>
+#include <vector>
+
 #include "bulbs_discover.h"
 
 static const uint16_t ssdp_port = 1982;
@@ -11,7 +19,7 @@ static const sockaddr_in ssdp_target_addr = {.sin_family = AF_INET,
 static const struct sockaddr_in listen_addr = {
     .sin_family = AF_INET, .sin_port = htons(ssdp_port), .sin_addr.s_addr = INADDR_ANY};
 
-std::tuple<std::string, std::string> BulbsDiscover::split(const std::string &s, char delim) {
+static std::tuple<std::string, std::string> split_str(const std::string &s, char delim) {
   std::tuple<std::string, std::string> result;
 
   int pos = s.find(':');
@@ -35,14 +43,14 @@ BulbInfo BulbsDiscover::parse_ssdp_response(std::string ssdp_response) {
   }
 
   while (std::getline(ss, line, '\n')) {
-    result.insert(split(line, ':'));
+    result.insert(split_str(line, ':'));
   }
 
   return result;
 }
 
-std::map<std::string, BulbInfo> BulbsDiscover::discover(std::chrono::duration<int> timeout) {
-  std::map<std::string, BulbInfo> bulbs;
+DiscoverResult BulbsDiscover::discover_by_ssdp(std::chrono::duration<int> timeout) {
+  DiscoverResult bulbs;
 
   int sock = socket(AF_INET, SOCK_DGRAM, 0);
   if (bind(sock, (struct sockaddr *)&listen_addr, sizeof(listen_addr)) < 0) {

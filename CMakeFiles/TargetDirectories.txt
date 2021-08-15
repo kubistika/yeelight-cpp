@@ -1,4 +1,4 @@
 /Users/kubistika/code/cpp/yeelight/CMakeFiles/rebuild_cache.dir
 /Users/kubistika/code/cpp/yeelight/CMakeFiles/edit_cache.dir
-/Users/kubistika/code/cpp/yeelight/CMakeFiles/example.dir
+/Users/kubistika/code/cpp/yeelight/CMakeFiles/cli.dir
 /Users/kubistika/code/cpp/yeelight/CMakeFiles/yeelight-lib.dir
